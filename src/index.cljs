@@ -1,1 +1,1 @@
-(.log js/console (+ 1 2 3 4))
+(->> (-> 1 (* 2) (/ 3) (.toString)) (.log js/console))
