@@ -12,7 +12,7 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
     }, {
-      test: /\.glisp$/,
+      test: /\.cljs/,
       loader: 'raw-loader',
     }],
   }
