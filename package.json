@@ -1,0 +1,32 @@
+{
+  "name": "glisp-examples",
+  "version": "0.1.0",
+  "description": "Example apps built with GLISP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build",
+    "build": "webpack",
+    "start": "http-server -p $PORT dest/",
+    "dev": "webpack-dev-server --progress --colours --hot --inline --content-base dest"
+  },
+  "keywords": [
+    "GLISP",
+    "Example",
+    "Apps"
+  ],
+  "author": "Ramanpreet Nara",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "glisp": "^0.2.1",
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.13.0"
+  }
+}
