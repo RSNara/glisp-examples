@@ -6,7 +6,7 @@ import * as Redux from 'redux';
 import * as R from 'ramda';
 import * as M from 'mathjs';
 import * as I from 'immutable';
-import * as VirtualDOM from 'virtual-dom';
+import VirtualDOM from 'virtual-dom';
 
 window.I = I;
 window.M = M;
@@ -17,7 +17,9 @@ const LIBRARIES = {
   [Symbol.for('VirtualDOM')]: VirtualDOM,
 };
 
-run(LIBRARIES, `(do ${library} ${program})`);
+window.addEventListener('DOMContentLoaded', () => {
+  run(LIBRARIES, `(do ${library} ${program})`);
+});
 
 function run(env, code) {
   return GLISP.evaluate(create(GLISP.RootEnv, env), GLISP.parse(code));
